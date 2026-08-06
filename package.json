@@ -1,0 +1,44 @@
+{
+  "name": "zoxide-doctor",
+  "version": "0.1.0",
+  "description": "Independent diagnostic CLI for zoxide installation, PATH, and shell setup",
+  "type": "module",
+  "bin": {
+    "zoxide-doctor": "bin/zoxide-doctor.js"
+  },
+  "exports": "./src/index.js",
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "node --check bin/zoxide-doctor.js && node --check src/index.js && node --check test/doctor.test.js && node --check scripts/smoke-test.mjs",
+    "test": "node --test test/*.test.js",
+    "pack:check": "npm pack --dry-run",
+    "smoke": "node scripts/smoke-test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "zoxide",
+    "cli",
+    "command-line",
+    "shell",
+    "linux",
+    "diagnostics",
+    "developer-tools"
+  ],
+  "homepage": "https://zoxide.org/blog/zoxide-command-not-found/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiankn/zoxide-doctor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jiankn/zoxide-doctor/issues"
+  },
+  "author": "jiankn",
+  "license": "MIT"
+}
