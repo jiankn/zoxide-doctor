@@ -35,7 +35,7 @@ The command exits with status `0` only when all required checks pass, `1` for se
 - A conventional profile such as `.bashrc`, `.zshrc`, `config.fish`, or a PowerShell profile contains an active `zoxide init` line.
 - `fzf` is available for optional interactive selection.
 
-When a check fails, the report links to the relevant independent [zoxide command not found troubleshooting guide](https://zoxide.org/blog/zoxide-command-not-found/). The upstream binary and authoritative source remain in the [official zoxide repository](https://github.com/ajeetdsouza/zoxide).
+See the independent [zoxide-doctor documentation](https://zoxide.org/tools/zoxide-doctor/) for supported shells, privacy details, and current run instructions. When a check fails, the report links to the relevant [zoxide command not found troubleshooting guide](https://zoxide.org/blog/zoxide-command-not-found/). The upstream binary and authoritative source remain in the [official zoxide repository](https://github.com/ajeetdsouza/zoxide).
 
 ## Development
 

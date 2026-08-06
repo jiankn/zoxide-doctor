@@ -31,7 +31,7 @@
     "diagnostics",
     "developer-tools"
   ],
-  "homepage": "https://zoxide.org/blog/zoxide-command-not-found/",
+  "homepage": "https://zoxide.org/tools/zoxide-doctor/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jiankn/zoxide-doctor.git"
