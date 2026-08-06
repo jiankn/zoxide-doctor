@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "lint": "node --check bin/zoxide-doctor.js && node --check src/index.js && node --check test/doctor.test.js && node --check scripts/smoke-test.mjs",
-    "test": "node --test test/*.test.js",
+    "test": "node --test test/doctor.test.js",
     "pack:check": "npm pack --dry-run",
     "smoke": "node scripts/smoke-test.mjs"
   },
