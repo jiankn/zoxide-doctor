@@ -1,0 +1,30 @@
+name: Verify AUR package
+
+on:
+  push:
+    paths:
+      - 'packaging/aur/**'
+      - '.github/workflows/aur-package.yml'
+  pull_request:
+    paths:
+      - 'packaging/aur/**'
+      - '.github/workflows/aur-package.yml'
+  workflow_dispatch:
+
+jobs:
+  makepkg:
+    runs-on: ubuntu-latest
+    container: archlinux:base-devel
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install runtime dependency
+        run: pacman -Syu --noconfirm nodejs
+      - name: Build and verify the package as an unprivileged user
+        run: |
+          useradd --create-home builder
+          chown -R builder:builder "$GITHUB_WORKSPACE"
+          su builder -c "cd '$GITHUB_WORKSPACE/packaging/aur' && makepkg --printsrcinfo > .SRCINFO.generated && diff -u .SRCINFO .SRCINFO.generated && makepkg -sfc --noconfirm"
+      - name: Install and smoke-test the built package
+        run: |
+          pacman -U --noconfirm "$GITHUB_WORKSPACE"/packaging/aur/zoxide-doctor-*.pkg.tar.zst
+          zoxide-doctor --help

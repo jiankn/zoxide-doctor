@@ -1,0 +1,12 @@
+pkgbase = zoxide-doctor
+	pkgdesc = Independent CLI that diagnoses zoxide installation, PATH, and shell setup
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://zoxide.org/tools/zoxide-doctor/
+	arch = any
+	license = MIT
+	depends = nodejs
+	source = zoxide-doctor-0.1.0.tar.gz::https://github.com/jiankn/zoxide-doctor/archive/refs/tags/v0.1.0.tar.gz
+	sha256sums = 4d8cc8921043939b1a1e064f9136e02457071ac2ab12e806bd9b3700802dde71
+
+pkgname = zoxide-doctor

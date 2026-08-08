@@ -1,0 +1,34 @@
+# Maintainer: Your Name <your-email@example.com>
+
+pkgname=zoxide-doctor
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Independent CLI that diagnoses zoxide installation, PATH, and shell setup'
+arch=('any')
+url='https://zoxide.org/tools/zoxide-doctor/'
+license=('MIT')
+depends=('nodejs')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/jiankn/zoxide-doctor/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('4d8cc8921043939b1a1e064f9136e02457071ac2ab12e806bd9b3700802dde71')
+
+check() {
+  cd "$pkgname-$pkgver"
+  node --test test/doctor.test.js
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  install -d "$pkgdir/usr/lib/$pkgname/bin" "$pkgdir/usr/lib/$pkgname/src"
+  install -Dm755 bin/zoxide-doctor.js "$pkgdir/usr/lib/$pkgname/bin/zoxide-doctor.js"
+  install -Dm644 src/index.js "$pkgdir/usr/lib/$pkgname/src/index.js"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+  install -d "$pkgdir/usr/bin"
+  cat > "$pkgdir/usr/bin/$pkgname" <<'EOF'
+#!/bin/sh
+exec /usr/bin/node /usr/lib/zoxide-doctor/bin/zoxide-doctor.js "$@"
+EOF
+  chmod 755 "$pkgdir/usr/bin/$pkgname"
+}
