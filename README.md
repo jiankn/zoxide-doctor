@@ -4,6 +4,8 @@
 
 This is an independent community tool. It is not affiliated with or endorsed by Ajeet D'Souza or the official zoxide project.
 
+![zoxide-doctor terminal diagnostic output](https://raw.githubusercontent.com/jiankn/zoxide-doctor/main/docs/assets/zoxide-doctor-terminal-preview.png)
+
 ## Run it
 
 After the npm release:

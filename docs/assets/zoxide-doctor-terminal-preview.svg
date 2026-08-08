@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">zoxide-doctor JSON diagnostic output</title>
+  <desc id="desc">A terminal showing zoxide-doctor checking Bash integration, PATH, and optional fzf support.</desc>
+  <rect width="1440" height="900" fill="#0b1020"/>
+  <rect x="40" y="36" width="1360" height="828" rx="14" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <rect x="40" y="36" width="1360" height="58" rx="14" fill="#1f2937"/>
+  <circle cx="76" cy="65" r="8" fill="#fb7185"/>
+  <circle cx="104" cy="65" r="8" fill="#fbbf24"/>
+  <circle cx="132" cy="65" r="8" fill="#34d399"/>
+  <text x="170" y="73" fill="#cbd5e1" font-size="20" font-family="Segoe UI, Arial, sans-serif">zoxide-doctor diagnostic</text>
+  <text x="82" y="143" fill="#86efac" font-size="23" font-family="Consolas, Menlo, monospace">$ zoxide-doctor --shell bash --json</text>
+  <text x="82" y="194" fill="#e2e8f0" font-size="21" font-family="Consolas, Menlo, monospace">{</text>
+  <text x="116" y="229" fill="#93c5fd" font-size="21" font-family="Consolas, Menlo, monospace">&quot;status&quot;</text><text x="246" y="229" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">: </text><text x="268" y="229" fill="#fca5a5" font-size="21" font-family="Consolas, Menlo, monospace">&quot;error&quot;</text><text x="386" y="229" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">,</text>
+  <text x="116" y="264" fill="#93c5fd" font-size="21" font-family="Consolas, Menlo, monospace">&quot;shell&quot;</text><text x="222" y="264" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">: {</text>
+  <text x="150" y="299" fill="#93c5fd" font-size="21" font-family="Consolas, Menlo, monospace">&quot;shell&quot;</text><text x="258" y="299" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">: </text><text x="280" y="299" fill="#fde68a" font-size="21" font-family="Consolas, Menlo, monospace">&quot;bash&quot;</text><text x="374" y="299" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">,</text>
+  <text x="150" y="334" fill="#93c5fd" font-size="21" font-family="Consolas, Menlo, monospace">&quot;source&quot;</text><text x="270" y="334" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">: </text><text x="292" y="334" fill="#fde68a" font-size="21" font-family="Consolas, Menlo, monospace">&quot;--shell&quot;</text><text x="410" y="334" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">,</text>
+  <text x="150" y="369" fill="#93c5fd" font-size="21" font-family="Consolas, Menlo, monospace">&quot;confidence&quot;</text><text x="330" y="369" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">: </text><text x="352" y="369" fill="#fde68a" font-size="21" font-family="Consolas, Menlo, monospace">&quot;high&quot;</text>
+  <text x="116" y="404" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">},</text>
+  <text x="116" y="439" fill="#93c5fd" font-size="21" font-family="Consolas, Menlo, monospace">&quot;checks&quot;</text><text x="246" y="439" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">: [</text>
+  <text x="150" y="474" fill="#86efac" font-size="21" font-family="Consolas, Menlo, monospace">{ &quot;id&quot;: &quot;shell&quot;, &quot;level&quot;: &quot;pass&quot;, &quot;message&quot;: &quot;Shell: bash via --shell&quot; },</text>
+  <text x="150" y="509" fill="#fca5a5" font-size="21" font-family="Consolas, Menlo, monospace">{ &quot;id&quot;: &quot;binary&quot;, &quot;level&quot;: &quot;fail&quot;, &quot;message&quot;: &quot;zoxide was not found on PATH&quot; },</text>
+  <text x="150" y="544" fill="#fde68a" font-size="21" font-family="Consolas, Menlo, monospace">{ &quot;id&quot;: &quot;fzf&quot;, &quot;level&quot;: &quot;info&quot;, &quot;message&quot;: &quot;fzf is not on PATH; interactive selection is optional&quot; }</text>
+  <text x="116" y="579" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">],</text>
+  <text x="116" y="614" fill="#93c5fd" font-size="21" font-family="Consolas, Menlo, monospace">&quot;recommendations&quot;</text><text x="382" y="614" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">: [</text>
+  <text x="150" y="649" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">{ &quot;title&quot;: &quot;Install zoxide&quot;, &quot;url&quot;: &quot;https://zoxide.org/download/&quot; },</text>
+  <text x="150" y="684" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">{ &quot;title&quot;: &quot;Optional fzf integration&quot;, &quot;url&quot;: &quot;https://zoxide.org/tutorials/fzf-integration/&quot; },</text>
+  <text x="150" y="719" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">{ &quot;title&quot;: &quot;Troubleshoot zoxide command not found&quot;, &quot;url&quot;: &quot;https://zoxide.org/blog/zoxide-command-not-found/&quot; }</text>
+  <text x="116" y="754" fill="#cbd5e1" font-size="21" font-family="Consolas, Menlo, monospace">]</text>
+  <text x="82" y="807" fill="#94a3b8" font-size="19" font-family="Consolas, Menlo, monospace">read-only diagnostics  •  exit status 1 when setup needs attention</text>
+</svg>
